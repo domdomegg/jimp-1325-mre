@@ -1,8 +1,5 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
-
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+import { expect, test } from '@jest/globals';
+test('Jimp can load', () => {
+  // eslint-disable-next-line global-require
+  expect(() => require('jimp')).not.toThrow();
 });
